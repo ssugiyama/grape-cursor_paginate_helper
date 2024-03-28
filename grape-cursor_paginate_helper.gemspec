@@ -29,7 +29,7 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{\Aexe/}) {|f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'active_record-cursor_paginator'
+  spec.add_dependency 'active_record-cursor_paginator', '>= 0.2'
   spec.add_dependency 'grape', '>= 1.7'
   spec.metadata['rubygems_mfa_required'] = 'true'
 end

@@ -19,11 +19,12 @@ module Grape
                            desc: 'paging direction :forward or :backward'
       optional :with_total, type: Boolean, default: false,
                             desc: 'if true, returns X-Total header'
+      optional :aliases, Type: Hash, desc: "aliases for relation's columns"
     end
 
     def cursor_paginate(collection)
       page = ActiveRecord::CursorPaginator.new(collection,
-                                               **[:per_page, :cursor, :direction].to_h {|k| [k, params[k]] })
+                                               **[:per_page, :cursor, :direction, :aliases].to_h {|k| [k, params[k]] })
       header 'X-Total',             page.total.to_s if params[:with_total]
       header 'X-Previous-Cursor',   page.start_cursor.to_s if page.previous_page?
       header 'X-Next-Cursor',       page.end_cursor.to_s if page.next_page?
