@@ -8,7 +8,8 @@ module Grape
 
     DEFAULT_PAGE_SIZE = 10
 
-    params :cursor_paginate do |opts = {}|
+    # Grape 3対応だが、Grape 2でも動作する（Ruby 3以降推奨）
+    params :cursor_paginate do |**opts|
       opts.reverse_merge!(
         per_page: DEFAULT_PAGE_SIZE,
       )
@@ -31,9 +32,10 @@ module Grape
     end
 
     module DSLMethods
-      def cursor_paginate(opts = {})
+      # Grape 3対応だが、Grape 2でも動作する（Ruby 3以降推奨）
+      def cursor_paginate(**opts)
         params do
-          use(:cursor_paginate, opts)
+          use(:cursor_paginate, **opts)
         end
       end
     end
