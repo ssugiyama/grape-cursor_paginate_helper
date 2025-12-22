@@ -1,4 +1,4 @@
-## [0.3.0] - 2025-12-15
+## [0.3.1] - 2025-12-15
 
 - upgrade active_record-cursor-paginator to 0.3.0
 
