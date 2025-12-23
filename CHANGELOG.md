@@ -1,3 +1,7 @@
+## [0.3.1] - 2025-12-15
+
+- upgrade active_record-cursor-paginator to 0.3.0
+
 ## [0.3.0] - 2025-12-03
 
 - support grape v3.x
