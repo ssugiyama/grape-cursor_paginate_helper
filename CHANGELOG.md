@@ -1,10 +1,10 @@
 ## [0.3.2] - 2026-03-06
 
-- upgrade active_record-cursor-paginator to 0.3.1
+- upgrade active_record-cursor_paginator to 0.3.1
 
 ## [0.3.1] - 2025-12-15
 
-- upgrade active_record-cursor-paginator to 0.3.0
+- upgrade active_record-cursor_paginator to 0.3.0
 
 ## [0.3.0] - 2025-12-03
 
@@ -13,7 +13,7 @@
 
 ## [0.2.0] - 2024-04-02
 
-- upgrade active_record-cursor-paginator to 0.2.0
+- upgrade active_record-cursor_paginator to 0.2.0
 
 ## [0.1.0] - 2023-09-21
 
