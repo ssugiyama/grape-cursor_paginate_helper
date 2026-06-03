@@ -1,6 +1,6 @@
 ## [0.3.3] - 2026-06-03
 
-- upgrade active_record-cursor_paginator to 0.3.2 or higher
+- upgrade active_record-cursor_paginator requirement to ~> 0.3.2
 
 ## [0.3.2] - 2026-03-06
 
