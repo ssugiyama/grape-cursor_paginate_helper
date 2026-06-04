@@ -22,14 +22,14 @@ Gem::Specification.new do |spec|
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
   spec.files = Dir.chdir(__dir__) do
     `git ls-files -z`.split("\x0").reject do |f|
-      (File.expand_path(f) == __FILE__) || f.start_with?(*%w[bin/ test/ spec/ features/ .git .circleci appveyor])
+      (File.expand_path(f) == __FILE__) || f.start_with?(*%w[bin/ test/ spec/ features/ .git .circleci appveyor Gemfile.lock])
     end
   end
   spec.bindir = 'exe'
   spec.executables = spec.files.grep(%r{\Aexe/}) {|f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'active_record-cursor_paginator', '0.3.1'
+  spec.add_dependency 'active_record-cursor_paginator', '~> 0.3.2'
   spec.add_dependency 'grape', '>= 2.0'
 
   spec.metadata['rubygems_mfa_required'] = 'true'
